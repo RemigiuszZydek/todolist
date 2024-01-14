@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import TodoForm from "./Todoform";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
-function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
+const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
 	const [edit, setEdit] = useState({
 		id: null,
 		value: "",
@@ -15,10 +15,11 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
 			id: null,
 			value: "",
 		});
-		if (edit.id) {
-			return <TodoForm edit={edit} onSubmit={submitUpdate} />;
-		}
 	};
+
+	if (edit.id) {
+		return <TodoForm edit={edit} onSubmit={submitUpdate} />;
+	}
 
 	return todos.map((todo, index) => (
 		<div
@@ -29,7 +30,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
 				{todo.text}
 			</div>
 			<div className="icons">
-				<AiFillCloseCircle
+				<RiCloseCircleLine
 					onClick={() => removeTodo(todo.id)}
 					className="delete-icon"
 				/>
@@ -40,6 +41,6 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
 			</div>
 		</div>
 	));
-}
+};
 
 export default Todo;

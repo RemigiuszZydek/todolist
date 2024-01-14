@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	background: linear-gradient(
+		90deg,
+		rgb(132, 131, 131) 0%,
+		rgb(71, 69, 69) 100%
+	);
+}
+
+.todo-app {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	width: 520px;
+	min-height: 600px;
+	background: linear-gradient(
+		180deg,
+		rgb(165, 165, 165) 0%,
+		rgb(71, 69, 69) 100%
+	);
+	text-align: center;
+	margin: 128px auto;
+	border-radius: 20px;
+	padding-bottom: 32px;
+	box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+	margin: 32px 0;
+	color: #2c3e50;
+	font-size: 28px;
+}
+
+.complete {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+.todo-form {
+	margin-bottom: 32px;
+}
+
+.todo-input {
+	padding: 16px 32px 16px 16px;
+	border-radius: 10px 0 0 10px;
+	border: 2px solid #3498db;
+	outline: none;
+	width: 320px;
+	background: #ecf0f1;
+	color: #111922;
+}
+
+.todo-input::placeholder {
+	color: #95a5a6;
+}
+
+.todo-button {
+	padding: 16px;
+	border: none;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	outline: none;
+	background: linear-gradient(
+		90deg,
+		rgb(59, 172, 247) 0%,
+		rgb(137, 41, 185) 100%
+	);
+	color: #fff;
+	text-transform: capitalize;
+	transition: background 0.3s ease;
+}
+
+.todo-button:hover {
+	background: linear-gradient(
+		90deg,
+		rgb(78, 101, 124) 0%,
+		rgb(14, 72, 44) 100%
+	);
+}
+
+.todo-input.edit {
+	border: 2px solid #0d293b;
+}
+
+.todo-button.edit {
+	background: linear-gradient(
+		90deg,
+		rgb(59, 172, 247) 0%,
+		rgb(137, 41, 185) 100%
+	);
+	padding: 16px 22px;
+}
+
+.todo-container {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.todo-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 8px auto;
+	color: #2c3e50;
+	background: linear-gradient(
+		90deg,
+		rgb(59, 172, 247) 0%,
+		rgb(137, 41, 185) 100%
+	);
+	padding: 16px;
+	border-radius: 15px;
+	width: 90%;
+	transition: background 0.3s ease;
+}
+
+.todo-row:hover {
+	background: linear-gradient(
+		90deg,
+		rgb(78, 101, 124) 0%,
+		rgb(14, 72, 44) 100%
+	);
+	color: aquamarine;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.delete-icon {
+	margin-right: 8px;
+	color: #fff;
+}
+
+.edit-icon {
+	color: #fff;
+}
